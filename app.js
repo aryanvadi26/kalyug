@@ -81,7 +81,7 @@ const redFleetShowcase = [
     height: '4,500 MM',
     engine: 'Direct Injection Diesel',
     mast: 'Triplex FFL',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Linde_H35.jpg/1280px-Linde_H35.jpg'
+    image: 'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=1400&q=85'
   },
   {
     counter: '02 / 04',
@@ -92,7 +92,7 @@ const redFleetShowcase = [
     height: '4,500 MM',
     engine: 'Turbocharged Diesel',
     mast: 'Triplex FFL',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Linde_H80_forklift.JPG/1280px-Linde_H80_forklift.JPG'
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=85'
   },
   {
     counter: '03 / 04',
@@ -103,7 +103,7 @@ const redFleetShowcase = [
     height: '5,000 MM',
     engine: 'Heavy Turbo Diesel',
     mast: 'Reinforced Wide-View',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Linde_H60_Gabelstapler.jpg/1280px-Linde_H60_Gabelstapler.jpg'
+    image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=85'
   },
   {
     counter: '04 / 04',
@@ -114,7 +114,7 @@ const redFleetShowcase = [
     height: '6,500 MM',
     engine: 'High-Displacement Diesel',
     mast: 'Failsafe Duplex Heavy',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Linde_H80_forklift.JPG/1280px-Linde_H80_forklift.JPG'
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1400&q=85'
   }
 ];
 
