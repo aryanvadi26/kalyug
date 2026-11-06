@@ -5,58 +5,55 @@ A premium, modern, visually impressive, and fully responsive frontend business w
 
 ---
 
-## 🎨 Visual Identity & Inspiration
+## 🎨 Visual Identity & Inspiration Upgrades
 
-- **Cinematic Machinery Aesthetic (Reference 1)**: Moody dark atmospheric backdrop, heavy industrial lighting flare, equipment showcase switcher (`01 / 04`), and high-contrast typography.
-- **Structured Industrial Branding (Reference 2)**: Bold typography, charcoal and matte black surfaces, safety-orange CTA banner, numbered service cards (`01` through `05`), and high-density industrial specification metrics.
-- **Brand Palette**:
-  - **Matte Black**: `#111111`
-  - **Charcoal**: `#1C1C1C` / `#202020`
-  - **Industrial Yellow**: `#F5C400`
-  - **Safety Orange**: `#F36B32`
-  - **Off-white**: `#F5F5F2`
-  - **Light Grey**: `#D9D9D9`
+- **Clean Linear Navigation (Reference 1)**: Single-line all-caps header (`HOME`, `SERVICES`, `EQUIPMENT`, `ABOUT US`, `ADVANTAGE`, `SPARE PARTS`, `CONTACT`) with active underline indicator, dark phone box with direct line (`+91 98250 84721`), and a prominent **`GET A QUOTE ↗`** CTA button with no line-wrapping.
+- **Cinematic Machinery Showcase (Reference 3 — Darnit2 Style)**: 
+  - Dark asphalt road / studio horizon backdrop with atmospheric fog and dual lighting (overhead daylight spotlight + red contour rim flare).
+  - Central **Red Heavy-Duty Diesel Forklift** with ground contact drop-shadow and wet floor reflection.
+  - Interactive **Component Hotspot Pins** on the Mast, Engine Bay, Hydraulics, and Tyres with technical popovers.
+  - Minimal Darnit2 controls: `02 / 04` model counter, `Get in touch` phone pill, quick specs bar, and sleek circular `<` and `>` arrow navigation buttons.
+- **Brand Palette — Industrial Crimson Red Edition**:
+  - **Primary Industrial Red**: `#E52E2E`
+  - **Red Glow & Hover**: `#FF3B30` / `rgba(229, 46, 46, 0.35)`
+  - **Deep Matte Black**: `#08090A` / `#0E0F12`
+  - **Charcoal Surfaces**: `#15161B` / `#1B1D24`
+  - **Off-white & Light Grey**: `#F5F5F7` / `#C5C6CE`
 
 ---
 
 ## 🏗️ Website Architecture & Sections
 
-1. **Top Announcement Bar**: 24/7 breakdown hotline, direct `tel:` link, yard location, and direct WhatsApp connect.
-2. **Sticky Glassmorphic Navigation**: Custom geometric FORKMAX forklift logo, responsive navigation links with scrollspy, phone direct call, and "GET A QUOTE" button.
-3. **Hero Section (Cinematic Showcase)**:
-   - High-impact yellow diesel forklift imagery with dark industrial overlay and radial illumination.
-   - Core headlines: *"POWERING INDUSTRY. MOVING WHAT MATTERS."*
-   - Interactive Darnit2-inspired Equipment Showcase Card (`01 / 04` switcher with dynamic specs).
-   - Axis Works-inspired metrics row (`3.0T – 16.0T`, `24/7`, `100% Inspected`, `10+ Sectors`).
-4. **About FORKMAX**: Asymmetric layout with industrial photography, brand story, and the 4 pillars (Reliable Industrial Support, Safety-Focused Operations, Equipment Maintenance, Customer-Oriented Service).
-5. **Our Services (5 Premier Cards)**:
-   - `SERVICE 01` — Diesel Forklift Rental (3T to 16T)
-   - `SERVICE 02` — Loading & Unloading Work
-   - `SERVICE 03` — Forklift Repairing & Diagnostics
-   - `SERVICE 04` — Forklift Service & Maintenance
-   - `SERVICE 05` — Forklift Spare Parts & Components
-6. **Forklift Rental & Equipment**: Interactive tab switcher for 3.0T, 5.0T, 10.0T, and 16.0T models with comprehensive technical specifications and instant quote CTAs.
-7. **Why Choose FORKMAX**: 6-card industrial strength grid with yellow accent numbering.
-8. **Industries We Serve**: 10 core industrial sectors (Manufacturing, Chemical, Steel, Cement, Construction, Warehouses, Logistics, Engineering, Ports, Infrastructure).
-9. **Forklift Spare Parts**: Visual parts gallery highlighting 10 categories (Forks, Tyres, Hydraulic Parts, Filters, Brake Parts, Engine Parts, Chains, Mast Components, Electrical Parts, Accessories).
+1. **Top Announcement Bar**: 24/7 hotline with direct call link, GIDC yard location, and instant WhatsApp link.
+2. **Sticky Glassmorphic Header (Reference 1)**: Custom geometric FORKMAX logo in Industrial Red, single-line uppercase menu, direct phone button, and red quote button.
+3. **Hero Section (Reference 3 Darnit2 Showcase)**:
+   - Centerpiece Red Diesel Forklift on dark asphalt with ground shadow and reflection.
+   - Interactive component hotspots (Triplex Mast, Turbo Diesel Engine, Tilt Cylinders, Puncture-Proof Tyres).
+   - Circular `<` and `>` arrow navigation cycling 4 Red Fleet Models (3.5T, 5.0T, 8.0T, 16.0T).
+   - Minimal `Get in touch` pill and quick specifications bar.
+   - Heavy industrial metrics row (`3.0T – 16.0T`, `24/7`, `100% Inspected`, `10+ Sectors`).
+4. **About FORKMAX**: Asymmetric layout with industrial photography, brand story, and the 4 pillars.
+5. **Our Services (5 Premier Cards)**: Diesel Forklift Rental, Loading & Unloading, Repairing, Maintenance, Spare Parts.
+6. **Forklift Rental & Equipment**: Interactive tab switcher for 3.0T, 5.0T, 10.0T, and 16.0T models with comprehensive technical specifications.
+7. **Why Choose FORKMAX**: 6-card industrial strength grid with red numbered tags (`01.` through `06.`).
+8. **Industries We Serve**: 10 core industrial sectors with icons and descriptions.
+9. **Forklift Spare Parts**: Visual parts gallery highlighting 10 categories with availability badges.
 10. **Contact & Enquiry Section**:
-    - High-impact Safety Orange CTA banner: *"NEED A FORKLIFT? LET'S GET TO WORK."*
-    - Direct phone, WhatsApp, location, and operational hours.
-    - Interactive frontend enquiry form with client-side validation (10-digit phone, required fields), instant feedback, and pre-filled WhatsApp routing.
+    - High-impact Industrial Red CTA banner: *"NEED A FORKLIFT? LET'S GET TO WORK."*
+    - Direct phone (`+91 98250 84721`), WhatsApp, location, and operational hours.
+    - Interactive frontend enquiry form with client-side validation and instant pre-filled WhatsApp routing.
 11. **Footer**: Logo, descriptor, services navigation, contact directory, and copyright.
 12. **Mobile Quick-Action Bar**: Floating bottom pill with "Call Now", "WhatsApp", and "Quote" buttons.
 
 ---
 
-## 🚀 How to Run & View
-
-No build tools or Node.js dependencies are required!
+## 🚀 How to View It
 
 1. Open File Explorer to:
    ```
    C:\Users\ASUS\Desktop\antigravity\kalyug\kalyug
    ```
-2. Double-click **`index.html`** to view the website in any modern browser (Chrome, Edge, Firefox, Brave).
+2. Double-click **`index.html`** to view the website in any modern browser.
 
 ---
 
@@ -66,7 +63,7 @@ No build tools or Node.js dependencies are required!
 2. In the left panel, you will see the updated files (`index.html`, `style.css`, `app.js`, `README.md`).
 3. In the bottom-left **Summary** field, type:
    ```
-   Build FORKMAX industrial equipment solutions website
+   Redesign header to match Reference 1, implement Industrial Red theme, and add Darnit2 cinematic red forklift hero stage
    ```
 4. Click **Commit to main**.
 5. Click **Push origin** to publish your website to GitHub!

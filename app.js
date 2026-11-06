@@ -1,6 +1,6 @@
 /**
  * FORKMAX — INDUSTRIAL EQUIPMENT SOLUTIONS
- * Interactive Engine & UI Controller
+ * Interactive Engine & UI Controller // RED INDUSTRIAL EDITION
  */
 
 // 1. Initialize Lucide Icons
@@ -20,7 +20,7 @@ function handleScroll() {
 
   // Add scrolled class to header
   if (header) {
-    if (scrollY > 40) {
+    if (scrollY > 30) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
@@ -70,85 +70,133 @@ if (mobileMenuBtn && mobileDrawer) {
   });
 }
 
-// 4. Reference 1 Inspired Hero Equipment Showcase Switcher
-const heroFleet = [
+// 4. Reference 3 (Darnit2) Inspired Hero Machinery Showcase Switcher
+const redFleetShowcase = [
   {
-    index: '01',
-    name: 'FORKMAX FX-3000D',
-    sub: '3.0 Ton Compact Yard & Container Lift',
-    cap: '3,000 KG',
+    counter: '01 / 04',
+    capTag: 'FROM 3.5 TON CAPACITY',
+    title: 'FORKMAX FX-3500R YARD',
+    sub: 'Compact Industrial Diesel Forklift',
+    cap: '3,500 KG',
     height: '4,500 MM',
-    engine: 'Turbo Diesel',
-    mast: 'Triplex FFL'
+    engine: 'Direct Injection Diesel',
+    mast: 'Triplex FFL',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Linde_H35.jpg/1280px-Linde_H35.jpg'
   },
   {
-    index: '02',
-    name: 'FORKMAX FX-5000D',
-    sub: '5.0 Ton Heavy-Duty Industrial Workhorse',
+    counter: '02 / 04',
+    capTag: 'FROM 5.0 TON CAPACITY',
+    title: 'FORKMAX FX-5000R PRO',
+    sub: 'Heavy-Duty Industrial Diesel Workhorse',
     cap: '5,000 KG',
     height: '4,500 MM',
-    engine: 'Industrial Diesel',
-    mast: 'Triplex FFL'
+    engine: 'Turbocharged Diesel',
+    mast: 'Triplex FFL',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Linde_H80_forklift.JPG/1280px-Linde_H80_forklift.JPG'
   },
   {
-    index: '03',
-    name: 'FORKMAX FX-10000D',
-    sub: '10.0 Ton High-Capacity Steel & Yard Lift',
-    cap: '10,000 KG',
+    counter: '03 / 04',
+    capTag: 'FROM 8.0 TON CAPACITY',
+    title: 'FORKMAX FX-8000R STEEL',
+    sub: 'High-Capacity Yard & Heavy Block Lift',
+    cap: '8,000 KG',
     height: '5,000 MM',
     engine: 'Heavy Turbo Diesel',
-    mast: 'Reinforced Wide-View'
+    mast: 'Reinforced Wide-View',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Linde_H60_Gabelstapler.jpg/1280px-Linde_H60_Gabelstapler.jpg'
   },
   {
-    index: '04',
-    name: 'FORKMAX FX-16000D',
-    sub: '16.0 Ton Port & Heavy Infrastructure Lifter',
+    counter: '04 / 04',
+    capTag: 'FROM 16.0 TON CAPACITY',
+    title: 'FORKMAX FX-16000R TITAN',
+    sub: 'Port & Mega Container Heavy Lifter',
     cap: '16,000 KG',
     height: '6,500 MM',
-    engine: 'High-Displacement Tier Diesel',
-    mast: 'Failsafe Duplex'
+    engine: 'High-Displacement Diesel',
+    mast: 'Failsafe Duplex Heavy',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Linde_H80_forklift.JPG/1280px-Linde_H80_forklift.JPG'
   }
 ];
 
-let currentHeroEqIndex = 1; // Default to 5.0T (index 1)
+let activeFleetIndex = 1; // Default to FX-5000R (index 1)
 
-function updateHeroEquipment(index) {
-  const item = heroFleet[index];
-  if (!item) return;
+function updateMachineryStage(index) {
+  const model = redFleetShowcase[index];
+  if (!model) return;
 
-  const eqIndex = document.getElementById('eqIndex');
-  const eqName = document.getElementById('eqName');
-  const eqSub = document.getElementById('eqSub');
-  const eqCap = document.getElementById('eqCap');
-  const eqHeight = document.getElementById('eqHeight');
-  const eqEngine = document.getElementById('eqEngine');
-  const eqMast = document.getElementById('eqMast');
+  const counterEl = document.getElementById('stageModelCounter');
+  const capTagEl = document.getElementById('activeCapacityTag');
+  const titleEl = document.getElementById('activeMachineTitle');
+  const subEl = document.getElementById('activeMachineSub');
+  const specCap = document.getElementById('specCap');
+  const specHeight = document.getElementById('specHeight');
+  const specEngine = document.getElementById('specEngine');
+  const specMast = document.getElementById('specMast');
+  const machineImg = document.getElementById('activeMachineImage');
+  const subjectWrap = document.getElementById('machinerySubject');
 
-  if (eqIndex) eqIndex.textContent = item.index;
-  if (eqName) eqName.textContent = item.name;
-  if (eqSub) eqSub.textContent = item.sub;
-  if (eqCap) eqCap.textContent = item.cap;
-  if (eqHeight) eqHeight.textContent = item.height;
-  if (eqEngine) eqEngine.textContent = item.engine;
-  if (eqMast) eqMast.textContent = item.mast;
+  if (counterEl) counterEl.textContent = model.counter;
+  if (capTagEl) capTagEl.textContent = model.capTag;
+  if (titleEl) titleEl.textContent = model.title;
+  if (subEl) subEl.textContent = model.sub;
+  if (specCap) specCap.textContent = model.cap;
+  if (specHeight) specHeight.textContent = model.height;
+  if (specEngine) specEngine.textContent = model.engine;
+  if (specMast) specMast.textContent = model.mast;
+
+  if (machineImg && subjectWrap) {
+    subjectWrap.style.opacity = '0.4';
+    subjectWrap.style.transform = 'scale(0.97)';
+    setTimeout(() => {
+      machineImg.src = model.image;
+      machineImg.alt = `${model.title} on Industrial Stage`;
+      subjectWrap.style.opacity = '1';
+      subjectWrap.style.transform = 'scale(1)';
+    }, 180);
+  }
 }
 
-const prevEqBtn = document.getElementById('prevEqBtn');
-const nextEqBtn = document.getElementById('nextEqBtn');
+const stagePrevBtn = document.getElementById('stagePrevBtn');
+const stageNextBtn = document.getElementById('stageNextBtn');
 
-if (prevEqBtn && nextEqBtn) {
-  prevEqBtn.addEventListener('click', () => {
-    currentHeroEqIndex = (currentHeroEqIndex - 1 + heroFleet.length) % heroFleet.length;
-    updateHeroEquipment(currentHeroEqIndex);
+if (stagePrevBtn && stageNextBtn) {
+  stagePrevBtn.addEventListener('click', () => {
+    activeFleetIndex = (activeFleetIndex - 1 + redFleetShowcase.length) % redFleetShowcase.length;
+    updateMachineryStage(activeFleetIndex);
   });
 
-  nextEqBtn.addEventListener('click', () => {
-    currentHeroEqIndex = (currentHeroEqIndex + 1) % heroFleet.length;
-    updateHeroEquipment(currentHeroEqIndex);
+  stageNextBtn.addEventListener('click', () => {
+    activeFleetIndex = (activeFleetIndex + 1) % redFleetShowcase.length;
+    updateMachineryStage(activeFleetIndex);
   });
 }
 
-// 5. Equipment Section Tab Switcher
+// 5. Interactive Hotspot Inspection Pins (Click / Keyboard accessibility)
+const hotspotPins = document.querySelectorAll('.hotspot-pin');
+hotspotPins.forEach((pin) => {
+  pin.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Toggle active state for mobile touch
+    const popover = pin.querySelector('.hotspot-popover');
+    if (popover) {
+      const isVisible = window.getComputedStyle(popover).visibility === 'visible';
+      popover.style.opacity = isVisible ? '0' : '1';
+      popover.style.visibility = isVisible ? 'hidden' : 'visible';
+      popover.style.transform = isVisible ? 'translateX(-50%) translateY(10px)' : 'translateX(-50%) translateY(0)';
+    }
+  });
+});
+
+// Close open hotspot tooltips when clicking anywhere else
+document.addEventListener('click', () => {
+  document.querySelectorAll('.hotspot-popover').forEach((pop) => {
+    pop.style.opacity = '';
+    pop.style.visibility = '';
+    pop.style.transform = '';
+  });
+});
+
+// 6. Equipment Section Tab Switcher
 const eqTabBtns = document.querySelectorAll('.eq-tab-btn');
 const eqPanes = document.querySelectorAll('.eq-pane');
 
@@ -172,12 +220,11 @@ eqTabBtns.forEach((btn) => {
       }
     });
 
-    // Re-trigger icon rendering for any dynamic elements inside
     initIcons();
   });
 });
 
-// 6. Preselect Service in Enquiry Form
+// 7. Preselect Service in Enquiry Form
 window.preselectService = function (serviceName) {
   const serviceSelect = document.getElementById('serviceRequired');
   if (serviceSelect) {
@@ -185,7 +232,7 @@ window.preselectService = function (serviceName) {
   }
 };
 
-// 7. Contact & Enquiry Form Validation & Submission
+// 8. Contact & Enquiry Form Validation & Submission
 const enquiryForm = document.getElementById('enquiryForm');
 const fullNameInput = document.getElementById('fullName');
 const phoneInput = document.getElementById('phoneNumber');
@@ -204,7 +251,7 @@ function setError(inputId, errorId, message) {
   if (errorEl) errorEl.textContent = message;
   if (inputEl) {
     if (message) {
-      inputEl.style.borderColor = '#ff6b6b';
+      inputEl.style.borderColor = '#ff4d4d';
     } else {
       inputEl.style.borderColor = '';
     }
@@ -214,7 +261,6 @@ function setError(inputId, errorId, message) {
 // Phone input number restriction
 if (phoneInput) {
   phoneInput.addEventListener('input', (e) => {
-    // Only allow digits
     e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
     if (e.target.value.length === 10) {
       setError('phoneNumber', 'phoneNumberError', '');
@@ -274,12 +320,10 @@ if (enquiryForm) {
 
     // Simulate instant frontend submission
     setTimeout(() => {
-      // Hide Form, show Success feedback
       enquiryForm.classList.add('hidden');
       if (successBox) {
         successBox.classList.remove('hidden');
 
-        // Populate success message
         const successName = document.getElementById('successCustomerName');
         const successService = document.getElementById('successServiceName');
         const successPhone = document.getElementById('successPhone');
@@ -294,14 +338,14 @@ if (enquiryForm) {
           const waMessage = encodeURIComponent(
             `Hello FORKMAX, I just submitted an enquiry:\n*Name:* ${nameVal}\n*Phone:* ${phoneVal}\n*Service:* ${serviceVal}\n*Details:* ${msgVal}`
           );
-          successWhatsAppLink.href = `https://wa.me/919876543210?text=${waMessage}`;
+          successWhatsAppLink.href = `https://wa.me/919825084721?text=${waMessage}`;
         }
       }
 
       submitBtn.disabled = false;
       if (btnText) btnText.textContent = 'SEND ENQUIRY';
       initIcons();
-    }, 700);
+    }, 600);
   });
 }
 
@@ -314,7 +358,7 @@ if (newEnquiryBtn) {
   });
 }
 
-// 8. Smooth anchor navigation offset for sticky header
+// 9. Smooth anchor navigation offset for sticky header
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     const targetId = this.getAttribute('href');
@@ -323,7 +367,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const targetEl = document.querySelector(targetId);
     if (targetEl) {
       e.preventDefault();
-      const headerOffset = 80;
+      const headerOffset = 82;
       const elementPosition = targetEl.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -339,5 +383,5 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 document.addEventListener('DOMContentLoaded', () => {
   initIcons();
   handleScroll();
-  updateHeroEquipment(1); // Default to 5.0T
+  updateMachineryStage(1); // Default to FX-5000R
 });
