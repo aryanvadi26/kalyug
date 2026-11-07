@@ -338,7 +338,7 @@ if (enquiryForm) {
           const waMessage = encodeURIComponent(
             `Hello FORKMAX, I just submitted an enquiry:\n*Name:* ${nameVal}\n*Phone:* ${phoneVal}\n*Service:* ${serviceVal}\n*Details:* ${msgVal}`
           );
-          successWhatsAppLink.href = `https://wa.me/919825084721?text=${waMessage}`;
+          successWhatsAppLink.href = `https://wa.me/918780829875?text=${waMessage}`;
         }
       }
 

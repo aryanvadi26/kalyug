@@ -876,32 +876,32 @@ ul {
   z-index: 1;
 }
 
-/* The Red Forklift Subject */
+/* The Forklift Subject Canvas - Native 16:9 Unclipped Aspect Ratio */
 .machinery-subject {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 900px;
+  max-width: 1024px;
+  aspect-ratio: 16 / 9;
   margin: 0 auto;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--surface-border);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-  background: #12141A;
+  background: #08090C;
 }
 
 .machinery-image {
   width: 100%;
-  height: 440px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  filter: contrast(1.12) brightness(0.92) saturate(1.1);
   transition: transform 0.6s ease;
 }
 
 .machinery-canvas-wrap:hover .machinery-image {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 /* Interactive Component Hotspot Inspection Pins (Product Visualizer) */
@@ -924,25 +924,25 @@ ul {
   outline: none;
 }
 
-/* Coordinates on the Forklift */
+/* Coordinates on the Forklift (16:9 Canvas) */
 .pin-mast {
-  top: 24%;
+  top: 25%;
   left: 58%;
 }
 
 .pin-engine {
-  top: 42%;
-  left: 45%;
+  top: 48%;
+  left: 42%;
 }
 
 .pin-hydraulics {
-  top: 56%;
-  left: 55%;
+  top: 61%;
+  left: 56%;
 }
 
 .pin-tyres {
-  bottom: 24%;
-  left: 45%;
+  top: 70%;
+  left: 43%;
 }
 
 .hotspot-core {
@@ -2799,11 +2799,11 @@ textarea {
   }
 
   .machinery-canvas-wrap {
-    min-height: 320px;
+    min-height: auto;
   }
 
   .machinery-image {
-    max-height: 280px;
+    max-height: none;
   }
 
   .stage-bottom-controls {
@@ -2895,5 +2895,147 @@ textarea {
 
   .section-title {
     font-size: 24px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SUB-PAGE COMPONENTS & IMAGE FIT ENHANCEMENTS
+   -------------------------------------------------------------------------- */
+.service-detail-block {
+  margin-bottom: 60px;
+  background: var(--charcoal);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.service-detail-block:hover {
+  border-color: rgba(229, 46, 46, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+}
+
+.service-detail-grid.reverse {
+  grid-template-columns: 1fr 1.1fr;
+}
+.service-detail-grid.reverse .service-detail-visual {
+  order: 2;
+}
+
+.service-detail-visual {
+  position: relative;
+  height: 100%;
+  min-height: 380px;
+  background: #0B0C10;
+  overflow: hidden;
+}
+
+.service-detail-img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-cinematic);
+}
+
+.service-detail-block:hover .service-detail-img {
+  transform: scale(1.03);
+}
+
+.service-detail-tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: var(--radius-sm);
+  z-index: 2;
+}
+
+.service-detail-content {
+  padding: 44px;
+}
+
+.specs-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.spec-mini-item {
+  background: var(--matte-black);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-mini-item strong {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  color: #FFFFFF;
+}
+
+.spec-mini-item span {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.service-points {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--light-grey);
+}
+
+.service-points li i {
+  color: var(--primary-red);
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .service-detail-grid,
+  .service-detail-grid.reverse {
+    grid-template-columns: 1fr;
+  }
+  .service-detail-grid.reverse .service-detail-visual {
+    order: 0;
+  }
+  .service-detail-visual,
+  .service-detail-img {
+    min-height: 260px;
+    height: 260px;
+  }
+  .service-detail-content {
+    padding: 28px 20px;
   }
 }
