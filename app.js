@@ -81,7 +81,7 @@ const redFleetShowcase = [
     height: '4,500 MM',
     engine: 'Direct Injection Diesel',
     mast: 'Triplex FFL',
-    image: 'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=1400&q=85'
+    image: 'assets/images/hero-forklift-3t.jpg'
   },
   {
     counter: '02 / 04',
@@ -92,7 +92,7 @@ const redFleetShowcase = [
     height: '4,500 MM',
     engine: 'Turbocharged Diesel',
     mast: 'Triplex FFL',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=85'
+    image: 'assets/images/forkmax-hero-cinematic.jpg'
   },
   {
     counter: '03 / 04',
@@ -103,7 +103,7 @@ const redFleetShowcase = [
     height: '5,000 MM',
     engine: 'Heavy Turbo Diesel',
     mast: 'Reinforced Wide-View',
-    image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=85'
+    image: 'assets/images/hero-forklift-8t.jpg'
   },
   {
     counter: '04 / 04',
@@ -114,7 +114,7 @@ const redFleetShowcase = [
     height: '6,500 MM',
     engine: 'High-Displacement Diesel',
     mast: 'Failsafe Duplex Heavy',
-    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1400&q=85'
+    image: 'assets/images/hero-forklift-16t.jpg'
   }
 ];
 
@@ -384,4 +384,35 @@ document.addEventListener('DOMContentLoaded', () => {
   initIcons();
   handleScroll();
   updateMachineryStage(1); // Default to FX-5000R
+
+  // Handle URL query parameters for contact form pre-population
+  const urlParams = new URLSearchParams(window.location.search);
+  const serviceParam = urlParams.get('service');
+  const eqParam = urlParams.get('equipment');
+  const partParam = urlParams.get('part');
+  const sSelect = document.getElementById('serviceRequired');
+  const mInput = document.getElementById('messageText');
+
+  if (sSelect) {
+    if (serviceParam) {
+      for (let i = 0; i < sSelect.options.length; i++) {
+        const val = sSelect.options[i].value.toLowerCase();
+        const pVal = serviceParam.toLowerCase().replace(/\+/g, ' ');
+        if (val.includes(pVal) || pVal.includes(val)) {
+          sSelect.selectedIndex = i;
+          break;
+        }
+      }
+    } else if (eqParam) {
+      sSelect.value = 'Diesel Forklift Rental';
+      if (mInput && !mInput.value) {
+        mInput.value = `Hello FORKMAX, I am interested in rental availability and quotation for: ${eqParam}.`;
+      }
+    } else if (partParam) {
+      sSelect.value = 'Forklift Spare Parts';
+      if (mInput && !mInput.value) {
+        mInput.value = `Hello FORKMAX, I need pricing and stock availability for spare part category: ${partParam}.`;
+      }
+    }
+  }
 });
