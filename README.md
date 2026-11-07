@@ -7,7 +7,7 @@ A premium, modern, visually impressive, and fully responsive frontend business w
 
 ## 🎨 Visual Identity & Inspiration Upgrades
 
-- **Clean Linear Navigation (Reference 1)**: Single-line all-caps header (`HOME`, `SERVICES`, `EQUIPMENT`, `ABOUT US`, `ADVANTAGE`, `SPARE PARTS`, `CONTACT`) with active underline indicator, dark phone box with direct line (`+91 98250 84721`), and a prominent **`GET A QUOTE ↗`** CTA button with no line-wrapping.
+- **Clean Linear Navigation (Reference 1)**: Single-line all-caps header (`HOME`, `SERVICES`, `EQUIPMENT`, `ABOUT US`, `ADVANTAGE`, `SPARE PARTS`, `CONTACT`) with active underline indicator, dark phone box with direct line (`+91 87808 29875`), and a prominent **`GET A QUOTE ↗`** CTA button with no line-wrapping.
 - **Cinematic Machinery Showcase (Reference 3 — Darnit2 Style)**: 
   - Dark asphalt road / studio horizon backdrop with atmospheric fog and dual lighting (overhead daylight spotlight + red contour rim flare).
   - Central **Red Heavy-Duty Diesel Forklift** with ground contact drop-shadow and wet floor reflection.
@@ -40,7 +40,7 @@ A premium, modern, visually impressive, and fully responsive frontend business w
 9. **Forklift Spare Parts**: Visual parts gallery highlighting 10 categories with availability badges.
 10. **Contact & Enquiry Section**:
     - High-impact Industrial Red CTA banner: *"NEED A FORKLIFT? LET'S GET TO WORK."*
-    - Direct phone (`+91 98250 84721`), WhatsApp, location, and operational hours.
+    - Direct phone (`+91 87808 29875`), WhatsApp, location, and operational hours.
     - Interactive frontend enquiry form with client-side validation and instant pre-filled WhatsApp routing.
 11. **Footer**: Logo, descriptor, services navigation, contact directory, and copyright.
 12. **Mobile Quick-Action Bar**: Floating bottom pill with "Call Now", "WhatsApp", and "Quote" buttons.
