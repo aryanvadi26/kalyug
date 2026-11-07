@@ -405,6 +405,25 @@ ul {
   flex-shrink: 0;
 }
 
+.site-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.brand-logo:hover .site-logo-img {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 8px rgba(243, 107, 50, 0.4));
+}
+
+.footer-logo-img {
+  height: 54px;
+  max-width: 210px;
+}
+
 .logo-symbol {
   width: 42px;
   height: 42px;
@@ -907,23 +926,23 @@ ul {
 
 /* Coordinates on the Forklift */
 .pin-mast {
-  top: 18%;
-  left: 38%;
+  top: 24%;
+  left: 58%;
 }
 
 .pin-engine {
-  top: 55%;
-  left: 62%;
-}
-
-.pin-hydraulics {
-  top: 52%;
+  top: 42%;
   left: 45%;
 }
 
+.pin-hydraulics {
+  top: 56%;
+  left: 55%;
+}
+
 .pin-tyres {
-  bottom: 16%;
-  left: 46%;
+  bottom: 24%;
+  left: 45%;
 }
 
 .hotspot-core {

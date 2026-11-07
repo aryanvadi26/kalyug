@@ -74,14 +74,14 @@ if (mobileMenuBtn && mobileDrawer) {
 const redFleetShowcase = [
   {
     counter: '01 / 04',
-    capTag: 'FROM 3.5 TON CAPACITY',
-    title: 'FORKMAX FX-3500R YARD',
-    sub: 'Compact Industrial Diesel Forklift',
-    cap: '3,500 KG',
-    height: '4,500 MM',
-    engine: 'Direct Injection Diesel',
-    mast: 'Triplex FFL',
-    image: 'assets/images/hero-forklift-3t.jpg'
+    capTag: 'FROM 7.0 TON CAPACITY',
+    title: 'FORKMAX FX-7000R TELE-BOOM',
+    sub: 'Heavy Rough-Terrain Telescopic Boom Forklift',
+    cap: '7,000 KG',
+    height: '7,500 MM',
+    engine: 'Heavy Turbo Diesel',
+    mast: 'Telescopic Extension',
+    image: 'assets/images/fleet-model-telehandler.jpg'
   },
   {
     counter: '02 / 04',
@@ -96,25 +96,25 @@ const redFleetShowcase = [
   },
   {
     counter: '03 / 04',
-    capTag: 'FROM 8.0 TON CAPACITY',
-    title: 'FORKMAX FX-8000R STEEL',
-    sub: 'High-Capacity Yard & Heavy Block Lift',
-    cap: '8,000 KG',
-    height: '5,000 MM',
-    engine: 'Heavy Turbo Diesel',
-    mast: 'Reinforced Wide-View',
-    image: 'assets/images/hero-forklift-8t.jpg'
+    capTag: 'FROM 3.5 TON CAPACITY',
+    title: 'FORKMAX FX-3500R REACH',
+    sub: 'High-Maneuverability Compact Reach Forklift',
+    cap: '3,500 KG',
+    height: '4,800 MM',
+    engine: 'Direct Drive Powertrain',
+    mast: 'Wide-View Triplex',
+    image: 'assets/images/fleet-model-compact.jpg'
   },
   {
     counter: '04 / 04',
     capTag: 'FROM 16.0 TON CAPACITY',
-    title: 'FORKMAX FX-16000R TITAN',
-    sub: 'Port & Mega Container Heavy Lifter',
+    title: 'FORKMAX FX-16000R MULTI-TITAN',
+    sub: 'Multi-Directional Side-Loader & Heavy Long-Load Mast',
     cap: '16,000 KG',
     height: '6,500 MM',
-    engine: 'High-Displacement Diesel',
-    mast: 'Failsafe Duplex Heavy',
-    image: 'assets/images/hero-forklift-16t.jpg'
+    engine: 'High-Displacement Commercial',
+    mast: 'Failsafe Guided Mast',
+    image: 'assets/images/fleet-model-sideloader.jpg'
   }
 ];
 
