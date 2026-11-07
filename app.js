@@ -1,6 +1,6 @@
 /**
- * FORKMAX — INDUSTRIAL EQUIPMENT SOLUTIONS
- * Interactive Engine & UI Controller // RED INDUSTRIAL EDITION
+ * SHREE RANG KRUPA ENTERPRISE — INDUSTRIAL EQUIPMENT SOLUTIONS
+ * Interactive Engine & UI Controller // INDUSTRIAL EDITION
  */
 
 // 1. Initialize Lucide Icons
@@ -75,7 +75,7 @@ const redFleetShowcase = [
   {
     counter: '01 / 04',
     capTag: 'FROM 7.0 TON CAPACITY',
-    title: 'FORKMAX FX-7000R TELE-BOOM',
+    title: 'SHREE RANG KRUPA FX-7000R TELE-BOOM',
     sub: 'Heavy Rough-Terrain Telescopic Boom Forklift',
     cap: '7,000 KG',
     height: '7,500 MM',
@@ -86,7 +86,7 @@ const redFleetShowcase = [
   {
     counter: '02 / 04',
     capTag: 'FROM 5.0 TON CAPACITY',
-    title: 'FORKMAX FX-5000R PRO',
+    title: 'SHREE RANG KRUPA FX-5000R PRO',
     sub: 'Heavy-Duty Industrial Diesel Workhorse',
     cap: '5,000 KG',
     height: '4,500 MM',
@@ -97,7 +97,7 @@ const redFleetShowcase = [
   {
     counter: '03 / 04',
     capTag: 'FROM 3.5 TON CAPACITY',
-    title: 'FORKMAX FX-3500R REACH',
+    title: 'SHREE RANG KRUPA FX-3500R REACH',
     sub: 'High-Maneuverability Compact Reach Forklift',
     cap: '3,500 KG',
     height: '4,800 MM',
@@ -108,7 +108,7 @@ const redFleetShowcase = [
   {
     counter: '04 / 04',
     capTag: 'FROM 16.0 TON CAPACITY',
-    title: 'FORKMAX FX-16000R MULTI-TITAN',
+    title: 'SHREE RANG KRUPA FX-16000R MULTI-TITAN',
     sub: 'Multi-Directional Side-Loader & Heavy Long-Load Mast',
     cap: '16,000 KG',
     height: '6,500 MM',
@@ -336,7 +336,7 @@ if (enquiryForm) {
         // Create pre-filled WhatsApp message URL
         if (successWhatsAppLink) {
           const waMessage = encodeURIComponent(
-            `Hello FORKMAX, I just submitted an enquiry:\n*Name:* ${nameVal}\n*Phone:* ${phoneVal}\n*Service:* ${serviceVal}\n*Details:* ${msgVal}`
+            `Hello SHREE RANG KRUPA ENTERPRISE, I just submitted an enquiry:\n*Name:* ${nameVal}\n*Phone:* ${phoneVal}\n*Service:* ${serviceVal}\n*Details:* ${msgVal}`
           );
           successWhatsAppLink.href = `https://wa.me/918780829875?text=${waMessage}`;
         }
@@ -406,12 +406,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (eqParam) {
       sSelect.value = 'Diesel Forklift Rental';
       if (mInput && !mInput.value) {
-        mInput.value = `Hello FORKMAX, I am interested in rental availability and quotation for: ${eqParam}.`;
+        mInput.value = `Hello SHREE RANG KRUPA ENTERPRISE, I am interested in rental availability and quotation for: ${eqParam}.`;
       }
     } else if (partParam) {
       sSelect.value = 'Forklift Spare Parts';
       if (mInput && !mInput.value) {
-        mInput.value = `Hello FORKMAX, I need pricing and stock availability for spare part category: ${partParam}.`;
+        mInput.value = `Hello SHREE RANG KRUPA ENTERPRISE, I need pricing and stock availability for spare part category: ${partParam}.`;
       }
     }
   }
