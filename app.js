@@ -51,7 +51,15 @@ const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileDrawer = document.getElementById('mobileDrawer');
 
 if (mobileMenuBtn && mobileDrawer) {
-  mobileMenuBtn.addEventListener('click', () => {
+  function closeMobileDrawer() {
+    mobileMenuBtn.classList.remove('open');
+    mobileDrawer.classList.remove('active');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    mobileDrawer.setAttribute('aria-hidden', 'true');
+  }
+
+  mobileMenuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     const isOpen = mobileMenuBtn.classList.toggle('open');
     mobileDrawer.classList.toggle('active', isOpen);
     mobileMenuBtn.setAttribute('aria-expanded', isOpen.toString());
@@ -61,12 +69,24 @@ if (mobileMenuBtn && mobileDrawer) {
   // Close mobile drawer when clicking any link inside
   const mobileLinks = mobileDrawer.querySelectorAll('a');
   mobileLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      mobileMenuBtn.classList.remove('open');
-      mobileDrawer.classList.remove('active');
-      mobileMenuBtn.setAttribute('aria-expanded', 'false');
-      mobileDrawer.setAttribute('aria-hidden', 'true');
-    });
+    link.addEventListener('click', closeMobileDrawer);
+  });
+
+  // Close mobile drawer when clicking outside
+  document.addEventListener('click', (e) => {
+    if (mobileDrawer.classList.contains('active')) {
+      if (!mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        closeMobileDrawer();
+      }
+    }
+  });
+
+  // Close mobile drawer on Escape key (accessibility)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer.classList.contains('active')) {
+      closeMobileDrawer();
+      mobileMenuBtn.focus();
+    }
   });
 }
 
@@ -92,7 +112,7 @@ const redFleetShowcase = [
     height: '4,500 MM',
     engine: 'Turbocharged Diesel',
     mast: 'Triplex FFL',
-    image: 'assets/images/forkmax-hero-cinematic.jpg'
+    image: 'assets/images/shree-rang-krupa-hero-cinematic.jpg'
   },
   {
     counter: '03 / 04',
